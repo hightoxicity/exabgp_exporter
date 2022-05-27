@@ -3,7 +3,7 @@ FROM golang:alpine AS build-env
 
 FROM golang:alpine
 ENV CGO_ENABLED 0
-ENV EXABGP_VERSION 4.0.10
+ENV EXABGP_VERSION 4.2.17
 ENV HOME /root
 ENV S6_LOGGING 1
 WORKDIR /root

@@ -168,8 +168,12 @@ type Attribute struct {
 		Value  stdlibjson.Number `json:"value"`
 		String string            `json:"string"`
 	} `json:"extended-community"`
-	Community         [][]int  `json:"community"`
-	ASPath            []int    `json:"as-path"`
+	Community [][]int `json:"community"`
+	//ASPath            []int    `json:"as-path"`
+	ASPath map[int]struct {
+		Element string `json:"element"`
+		Value   []int  `json:"value"`
+	} `json:"as-path"`
 	ConfederationPath []int    `json:"confederation-path"`
 	OriginatorID      string   `json:"originator-id"`
 	LocalPreference   int      `json:"local-preference"`
